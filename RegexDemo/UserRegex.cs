@@ -11,9 +11,9 @@ namespace RegexDemo
 
     { public void Password()
         {
-            Console.WriteLine("Password");
+            Console.WriteLine("Password Minimum 1 Upper Case");
             var data = Console.ReadLine();
-            String namepattern = "^[a-zA-Z]{8,}$";
+            String namepattern = "^(?=.{8,}$)(?=.*[a-z])(?=.*[A-Z]).*$";
             Regex regex = new Regex(namepattern);
             if (regex.IsMatch(data))
             {
