@@ -9,19 +9,19 @@ namespace RegexDemo
 {
     public class UserRegex
 
-    { public void LastName()
+    { public void PhoneNumber()
         {
-            Console.WriteLine("e mail");
+            Console.WriteLine("Phone Number");
             var data = Console.ReadLine();
-            String namepattern = "^[a-z]{3}[.]{1}([a-z]{3}){0,1}[@]{1}[a-z]{2}[.]{1}[a-z]{2,3}[.]{1}([a-z]{2}){0,1}$";
+            String namepattern = "^[0-9]{2}[ ]{1}[6-9]{1}[0-9]{9}$";
             Regex regex = new Regex(namepattern);
             if (regex.IsMatch(data))
             {
-                Console.WriteLine("e mail is Valid");
+                Console.WriteLine("Phone number is Valid");
             }
             else
             {
-                Console.WriteLine("e mail is not Valid");
+                Console.WriteLine("Phone number is not Valid");
             }
         }
     }
