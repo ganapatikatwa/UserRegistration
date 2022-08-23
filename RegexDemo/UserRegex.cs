@@ -11,17 +11,17 @@ namespace RegexDemo
 
     { public void LastName()
         {
-            Console.WriteLine("Last Name");
+            Console.WriteLine("e mail");
             var data = Console.ReadLine();
-            String namepattern = "^[A-Z]{1}[a-zA-Z]{2,}$";
+            String namepattern = "^[a-z]{3}[.]{1}([a-z]{3}){0,1}[@]{1}[a-z]{2}[.]{1}[a-z]{2,3}[.]{1}([a-z]{2}){0,1}$";
             Regex regex = new Regex(namepattern);
             if (regex.IsMatch(data))
             {
-                Console.WriteLine("Last is Valid");
+                Console.WriteLine("e mail is Valid");
             }
             else
             {
-                Console.WriteLine("Last is not Valid");
+                Console.WriteLine("e mail is not Valid");
             }
         }
     }
