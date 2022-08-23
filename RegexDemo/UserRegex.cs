@@ -9,19 +9,19 @@ namespace RegexDemo
 {
     public class UserRegex
 
-    { public void PhoneNumber()
+    { public void Password()
         {
-            Console.WriteLine("Phone Number");
+            Console.WriteLine("Password");
             var data = Console.ReadLine();
-            String namepattern = "^[0-9]{2}[ ]{1}[6-9]{1}[0-9]{9}$";
+            String namepattern = "^[a-zA-Z]{8,}$";
             Regex regex = new Regex(namepattern);
             if (regex.IsMatch(data))
             {
-                Console.WriteLine("Phone number is Valid");
+                Console.WriteLine("Password is Valid");
             }
             else
             {
-                Console.WriteLine("Phone number is not Valid");
+                Console.WriteLine("Password is not Valid");
             }
         }
     }

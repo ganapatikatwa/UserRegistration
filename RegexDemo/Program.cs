@@ -8,7 +8,7 @@ class Program
     static void Main(String[] args)
     {
         UserRegex user = new UserRegex();
-        user.PhoneNumber();
+        user.Password();
         
     }
 
