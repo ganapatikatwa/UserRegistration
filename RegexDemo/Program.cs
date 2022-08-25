@@ -13,7 +13,8 @@ public class Program
         while (n)
         {
             Console.WriteLine("Choose option 1. Firstname 2.Last Name 3.Email 4. mobile no 5.password" +
-                "\n6.password With One upper case 7.password With One upper case and oneNumeric");
+                "\n6.password With One upper case 7.password With One upper case and oneNumeric" +
+                "\n8.password With One upper case and oneNumeric and one Special char");
             int option = Int32.Parse(Console.ReadLine());
             switch (option)
             {
@@ -24,6 +25,7 @@ public class Program
                 case 5: user.Password(); break;
                 case 6: user.PasswordUpperCase(); break;
                 case 7: user.PasswordUpperCaseNumber(); break;
+                case 8: user.PasswordUpperCaseNumberSpecial(); break;
                 default:
                     n = false;
                     Console.WriteLine("Enter valid option"); break;
